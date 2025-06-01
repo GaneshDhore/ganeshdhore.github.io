@@ -5,42 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ganesh Dhore | Data Analyst</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; }
-    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-    h1, h2 { color: #2c3e50; }
-    a { color: #2980b9; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .section { margin-bottom: 40px; }
-    ul { padding-left: 20px; }
-    .btn-group a { margin-right: 15px; display: inline-block; padding: 10px 15px; background: #2980b9; color: #fff; border-radius: 5px; text-decoration: none; }
-    .btn-group a:hover { background: #1c5980; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .btn {
+      background-color: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-right: 15px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #1c5980;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    .project-card {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+    }
+    .hero-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Ganesh Dhore</h1>
-    <p><strong>Data Analyst | Chicago, IL</strong></p>
-    <div class="btn-group">
-      <a href="mailto:gdhore241299@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/ganeshdhore/" target="_blank">LinkedIn</a>
-      <a href="#">Download Resume</a>
-    </div>
+    <header>
+      <h1>Ganesh Dhore</h1>
+      <p><strong>Data Analyst | Based in Chicago, IL</strong></p>
+      <div>
+        <a href="mailto:gdhore241299@gmail.com" class="btn">Email Me</a>
+        <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn" target="_blank">LinkedIn</a>
+        <a href="Ganesh_Dhore_Resume.pdf" class="btn" target="_blank">Download Resume</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1581091870627-3e4b6b064d4f" alt="Data visualization" class="hero-image">
+    </header>
 
-    <div class="section">
+    <section>
       <h2>About Me</h2>
       <p>Results-driven Data Analyst with 2+ years of experience leveraging data to optimize business performance. Skilled in Python, SQL, R, Power BI, and AWS. Passionate about turning data into actionable insights and automating reporting workflows.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>Projects</h2>
-      <ul>
-        <li><strong>Flight Delay Prediction</strong>: Built a predictive model using Python and Scikit-learn to classify delays. <a href="#">[GitHub]</a></li>
-        <li><strong>Cloud Cost Optimization Dashboard</strong>: Power BI dashboard on AWS usage with automated ETL in Python/SQL. <a href="#">[GitHub]</a></li>
-        <li><strong>JPMorgan Virtual Experience</strong>: Spring Boot + Kafka integration simulating secure banking workflows. <a href="#">[GitHub]</a></li>
-      </ul>
-    </div>
+      <div class="project-card">
+        <p><strong>Flight Delay Prediction</strong>: Built a predictive model using Python and Scikit-learn to classify delays. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
+      </div>
+      <div class="project-card">
+        <p><strong>Cloud Cost Optimization Dashboard</strong>: Power BI dashboard on AWS usage with automated ETL in Python/SQL. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
+      </div>
+      <div class="project-card">
+        <p><strong>JPMorgan Virtual Experience</strong>: Spring Boot + Kafka integration simulating secure banking workflows. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
+      </div>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>Skills</h2>
       <ul>
         <li><strong>Languages:</strong> Python, R, SQL, Java, C++</li>
@@ -49,24 +111,24 @@
         <li><strong>Databases:</strong> MySQL, Oracle</li>
         <li><strong>ETL:</strong> Python Scripting, REST APIs</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>Experience</h2>
       <p><strong>Data Analyst</strong> – Vishal Group (2021–2023)<br>
       Automated ETL processes, improved reporting efficiency, and built dashboards for business and risk teams.</p>
       <p><strong>Graduate TA + CDA</strong> – Illinois Tech (2024–2025)<br>
       Guided students and managed front-desk operations with a 90% resolution rate for queries.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>Publications</h2>
       <ul>
         <li><a href="https://link.springer.com/chapter/10.1007/978-981-16-6369-7_60" target="_blank">Springer: Fuzzy Logic in WSN</a></li>
         <li><a href="https://www.irjet.net/archives/V8/i2/IRJET-V8I2302.pdf" target="_blank">IRJET: Energy Efficient Clustering</a></li>
         <li><a href="https://www.irjet.net/archives/V7/i6/IRJET-V7I6340.pdf" target="_blank">IRJET: WSN Lifetime Optimization</a></li>
       </ul>
-    </div>
+    </section>
   </div>
 </body>
 </html>
