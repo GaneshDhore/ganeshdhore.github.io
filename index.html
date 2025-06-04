@@ -3,58 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ganesh Dhore | Chicago | Data Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Ganesh Dhore | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
       margin: 0;
       padding: 0;
-      color: var(--text-color);
-      background: var(--bg-color);
-      transition: background 0.4s, color 0.4s;
+      transition: all 0.3s ease-in-out;
     }
     :root {
-      --bg-color: #fdfdfd;
-      --text-color: #222;
-      --nav-bg: #1e3a8a;
-      --btn-bg: #2563eb;
-      --btn-hover: #1d4ed8;
-      --link-bg: #059669;
-      --link-hover: #047857;
+      --bg-color: #f0f4f8;
+      --text-color: #1a202c;
+      --accent: #4f46e5;
+      --accent-light: #6366f1;
+      --card-bg: white;
     }
     [data-theme="dark"] {
       --bg-color: #1a202c;
-      --text-color: #f7fafc;
-      --nav-bg: #2c5282;
-      --btn-bg: #3b82f6;
-      --btn-hover: #2563eb;
-      --link-bg: #10b981;
-      --link-hover: #059669;
+      --text-color: #e2e8f0;
+      --accent: #818cf8;
+      --accent-light: #a5b4fc;
+      --card-bg: #2d3748;
     }
     nav {
-      background-color: var(--nav-bg);
+      background: var(--accent);
       color: white;
-      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 10;
+    }
+    nav ul {
+      list-style: none;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
+      font-weight: 600;
     }
     .theme-toggle {
       background: none;
@@ -66,174 +62,160 @@
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 2rem 1rem;
     }
     header {
       text-align: center;
-      padding-bottom: 40px;
     }
     h1 {
-      font-size: 3em;
-      color: var(--nav-bg);
-      margin-bottom: 5px;
+      font-size: 3rem;
+      color: var(--accent);
     }
     h2 {
-      font-size: 2em;
-      color: var(--nav-bg);
-      border-bottom: 2px solid #cbd5e0;
-      margin-top: 50px;
-      padding-bottom: 8px;
-    }
-    p, li {
-      font-size: 1.05em;
-    }
-    .btn, .link-btn {
+      font-size: 2rem;
+      margin-top: 3rem;
+      border-bottom: 2px solid var(--accent-light);
       display: inline-block;
-      margin: 8px 8px 0 0;
-      padding: 10px 20px;
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
+      padding-bottom: 0.25rem;
     }
     .btn {
-      background-color: var(--btn-bg);
+      background: var(--accent);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin: 0.5rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s;
     }
     .btn:hover {
-      background-color: var(--btn-hover);
-    }
-    .link-btn {
-      background-color: var(--link-bg);
-    }
-    .link-btn:hover {
-      background-color: var(--link-hover);
-    }
-    .project-card {
-      background-color: white;
-      padding: 18px 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-      transition: transform 0.3s ease, background-color 0.3s;
-    }
-    [data-theme="dark"] .project-card {
-      background-color: #2d3748;
-    }
-    .project-card:hover {
-      transform: translateY(-6px);
-    }
-    section {
-      margin-bottom: 60px;
-      animation: fadeInUp 1s ease both;
+      background: var(--accent-light);
     }
     .hero-image {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-top: 25px;
-    }
-    .scroll-top, .scroll-bottom {
-      position: fixed;
-      right: 20px;
-      font-size: 1.5rem;
-      background: var(--nav-bg);
-      color: white;
-      border: none;
-      padding: 10px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+      margin-top: 1rem;
+      border: 4px solid var(--accent);
     }
-    .scroll-top {
-      bottom: 80px;
+    section {
+      margin-bottom: 3rem;
     }
-    .scroll-bottom {
-      bottom: 20px;
+    .card {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-top: 1rem;
+      transition: transform 0.3s;
     }
-    @keyframes fadeInUp {
-      from {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .skill-box {
+      background: var(--card-bg);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .skill-box:hover {
+      background: var(--accent);
+      color: white;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
   </nav>
 
   <div class="container" id="home">
     <header>
+      <img src="./ganesh-photo.jpg" alt="Ganesh Dhore Photo" class="hero-image">
       <h1>Ganesh Dhore</h1>
-      <p><strong>Data Analyst | Based in Chicago, IL</strong></p>
+      <p><strong>Data Analyst | Cloud Enthusiast | Based in Chicago</strong></p>
       <div>
-        <a href="mailto:gdhore241299@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
-        <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="./Ganesh_Resume.pdf" class="btn" target="_blank"><i class="fas fa-file-download"></i> Resume</a>
+        <a href="mailto:gdhore241299@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="./Ganesh_Resume.pdf" class="btn"><i class="fas fa-file"></i> Resume</a>
       </div>
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80" alt="Work setup" class="hero-image">
     </header>
 
     <section id="about">
       <h2>About Me</h2>
-      <p>I'm a graduate student at Illinois Institute of Technology with hands-on experience in data analytics, cloud computing, and full-stack development. I specialize in transforming complex datasets into smart insights and designing solutions that improve business outcomes.</p>
+      <p>I’m a graduate student at Illinois Tech, passionate about turning complex data into clear stories. With a background in full-stack development, cloud infrastructure, and analytics, I create efficient and impactful solutions that drive business outcomes.</p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project-card">
-        <p><strong>Flight Delay Prediction</strong>: Built a predictive model using Python and Pandas to estimate flight delays. Included visualizations and metric evaluations. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
+      <div class="card">
+        <strong>Flight Delay Prediction</strong>
+        <p>Developed a Python model using pandas and scikit-learn to predict airline delays, visualized with Matplotlib.</p>
       </div>
-      <div class="project-card">
-        <p><strong>Cloud Cost Optimization Dashboard</strong>: Designed a Power BI dashboard to analyze AWS CUR data for cost reduction. Integrated with S3 and SQL ETL processes. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
+      <div class="card">
+        <strong>Cloud Cost Optimization Dashboard</strong>
+        <p>Created Power BI dashboards and automated AWS CUR pipeline to track cloud expenses in real-time.</p>
       </div>
-      <div class="project-card">
-        <p><strong>JPMorgan Virtual Experience</strong>: Developed secure transaction simulation with Spring Boot and Kafka. <a class="btn" href="https://github.com/GaneshDhore/midas" target="_blank">View on GitHub</a></p>
+      <div class="card">
+        <strong>JPMorgan Virtual Experience</strong>
+        <p>Built Spring Boot services integrated with Kafka to simulate a secure banking system.</p>
       </div>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Python, SQL, R, Java, C++</li>
-        <li><strong>Tools:</strong> Power BI, Tableau, Scikit-learn, Excel, Git</li>
-        <li><strong>Cloud:</strong> AWS (S3, Lambda, CUR), Snowflake</li>
-        <li><strong>Frameworks:</strong> Spring Boot, Kafka</li>
-        <li><strong>Databases:</strong> MySQL, Oracle</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill-box">Python, SQL, R</div>
+        <div class="skill-box">Power BI, Tableau, Excel</div>
+        <div class="skill-box">AWS (S3, CUR, Lambda)</div>
+        <div class="skill-box">Snowflake, MySQL, Oracle</div>
+        <div class="skill-box">Spring Boot, Kafka</div>
+        <div class="skill-box">Git, GitHub, REST APIs</div>
+      </div>
     </section>
 
     <section id="experience">
       <h2>Experience</h2>
-      <p><strong>Data Analyst</strong> – Vishal Group, Pune (Jun 2021 – Jul 2023)<br>
-      Automated ETL workflows, designed audit logs, and created Power BI/Tableau dashboards to streamline reporting and improve compliance—contributing to 10% revenue growth and 30% faster remediation.</p>
-
-      <p><strong>Graduate Teaching Assistant</strong> – Illinois Institute of Technology (Jan 2025 – May 2025)<br>
-      Led recitations, graded assignments, and helped students boost conceptual clarity by 30%.</p>
-
-      <p><strong>Community Desk Assistant</strong> – Illinois Institute of Technology (Feb 2024 – May 2025)<br>
-      Resolved 90% of student concerns in under five minutes with empathy and efficiency.</p>
+      <div class="card">
+        <strong>Data Analyst – Vishal Group, Pune</strong> (2021–2023)
+        <p>Automated ETL pipelines, developed dashboards, and improved compliance tracking for the risk & audit teams.</p>
+      </div>
+      <div class="card">
+        <strong>Graduate Teaching Assistant – Illinois Tech</strong> (2025)
+        <p>Helped students enhance conceptual understanding through detailed feedback and hands-on recitation sessions.</p>
+      </div>
+      <div class="card">
+        <strong>Community Desk Assistant – Illinois Tech</strong> (2024–2025)
+        <p>Delivered high-speed support and resolved 90% of student issues in under 5 minutes.</p>
+      </div>
     </section>
 
     <section id="education">
       <h2>Education</h2>
-      <p><strong>M.S. in Information Technology & Management</strong> – Illinois Institute of Technology (2023–2025)</p>
-      <p><strong>B.Tech in Computer Engineering</strong> – PCCOE, Pune (2017–2021)</p>
+      <div class="card">
+        <strong>M.S. in IT & Management</strong> – Illinois Institute of Technology (2023–2025)<br>
+        <strong>B.Tech in Computer Engineering</strong> – PCCOE, Pune (2017–2021)
+      </div>
     </section>
   </div>
-
-  <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆</button>
-  <button class="scroll-bottom" onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">⬇</button>
 
   <script>
     function toggleTheme() {
