@@ -7,131 +7,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      transition: all 0.3s ease-in-out;
-    }
-    :root {
-      --bg-color: #f0f4f8;
-      --text-color: #1a202c;
-      --accent: #4f46e5;
-      --accent-light: #6366f1;
-      --card-bg: white;
-    }
-    [data-theme="dark"] {
-      --bg-color: #1a202c;
-      --text-color: #e2e8f0;
-      --accent: #818cf8;
-      --accent-light: #a5b4fc;
-      --card-bg: #2d3748;
+      transition: background 0.3s, color 0.3s;
     }
     nav {
-      background: var(--accent);
-      color: white;
       display: flex;
       justify-content: space-between;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      align-items: center;
     }
     nav ul {
-      list-style: none;
       display: flex;
       gap: 1.5rem;
-      margin: 0;
+      list-style: none;
       padding: 0;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
     .theme-toggle {
-      background: none;
+      background: transparent;
       border: none;
       color: white;
       font-size: 1.2rem;
       cursor: pointer;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    header {
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      color: var(--accent);
-    }
-    h2 {
-      font-size: 2rem;
-      margin-top: 3rem;
-      border-bottom: 2px solid var(--accent-light);
-      display: inline-block;
-      padding-bottom: 0.25rem;
-    }
-    .btn {
-      background: var(--accent);
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: 600;
-      margin: 0.5rem;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: var(--accent-light);
-    }
-    .hero-image {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-top: 1rem;
-      border: 4px solid var(--accent);
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    .card {
-      background: var(--card-bg);
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      margin-top: 1rem;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-    }
-    .skill-box {
-      background: var(--card-bg);
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-      font-weight: 600;
-      transition: all 0.3s;
-    }
-    .skill-box:hover {
-      background: var(--accent);
-      color: white;
+      padding-right: 1rem;
     }
   </style>
 </head>
@@ -143,6 +39,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#publications">Publications</a></li>
     </ul>
     <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
   </nav>
@@ -153,57 +50,57 @@
       <h1>Ganesh Dhore</h1>
       <p><strong>Data Analyst | Business Analyst | Based in Chicago</strong></p>
       <div>
-        <a href="mailto:gdhore241299@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="./Ganesh_Resume.pdf" class="btn"><i class="fas fa-file"></i> Resume</a>
+        <a href="mailto:gdhore241299@gmail.com?subject=Let's Connect&body=Hi Ganesh," class="btn"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="./Ganesh_Resume.pdf" class="btn" target="_blank"><i class="fas fa-file"></i> Resume</a>
       </div>
     </header>
 
     <section id="about">
       <h2>About Me</h2>
-      <p>I’m a graduate student at Illinois Tech, passionate about turning complex data into clear stories. With a background in software development and experience in analytics, I create efficient and impactful solutions that drive business outcomes.</p>
+      <p>I’m a graduate student at Illinois Tech, passionate about turning complex data into clear stories. With a background in full-stack development, business analysis, and cloud infrastructure, I create efficient and impactful solutions that drive business outcomes.</p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <div class="card">
         <strong>Flight Delay Prediction</strong>
-        <p>Developed a Python model using pandas and scikit-learn to predict airline delays, visualized with Matplotlib.</p>
+        <p>Developed a Python model using pandas and scikit-learn to predict airline delays, visualized with Matplotlib. <a href="https://github.com/GaneshDhore/flight-delay-prediction" target="_blank">View Project</a></p>
       </div>
       <div class="card">
         <strong>Cloud Cost Optimization Dashboard</strong>
-        <p>Created Power BI dashboards and automated AWS CUR pipeline to track cloud expenses in real-time.</p>
+        <p>Created Power BI dashboards and automated AWS CUR pipeline to track cloud expenses in real-time. <a href="https://github.com/GaneshDhore/cloud-cost-dashboard" target="_blank">View Project</a></p>
       </div>
       <div class="card">
         <strong>JPMorgan Virtual Experience</strong>
-        <p>Built Spring Boot services integrated with Kafka to simulate a secure banking system.</p>
+        <p>Built Spring Boot services integrated with Kafka to simulate a secure banking system. <a href="https://github.com/GaneshDhore/midas" target="_blank">View Project</a></p>
       </div>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-box">Python, SQL, R</div>
-        <div class="skill-box">Power BI, Tableau, Excel</div>
-        <div class="skill-box">AWS (S3, CUR, Lambda)</div>
-        <div class="skill-box">Snowflake, MySQL, Oracle</div>
-        <div class="skill-box">Spring Boot, Kafka</div>
-        <div class="skill-box">Git, GitHub, REST APIs</div>
+        <div class="skill-box"><strong>Programming Languages:</strong><br>Python, SQL, R</div>
+        <div class="skill-box"><strong>Visualization Tools:</strong><br>Power BI, Tableau, Excel</div>
+        <div class="skill-box"><strong>Cloud Platforms:</strong><br>AWS (S3, CUR, Lambda)</div>
+        <div class="skill-box"><strong>Databases:</strong><br>Snowflake, MySQL, Oracle</div>
+        <div class="skill-box"><strong>Frameworks & APIs:</strong><br>Spring Boot, Kafka, REST APIs</div>
+        <div class="skill-box"><strong>Tools & Version Control:</strong><br>Git, GitHub</div>
       </div>
     </section>
 
     <section id="experience">
       <h2>Experience</h2>
       <div class="card">
-        <strong>Graduate Teaching Assistant – Illinois Tech</strong> (2025)
+        <strong>Graduate Teaching Assistant – Illinois Tech</strong> (Jan2025 - May2025)
         <p>Helped students enhance conceptual understanding through detailed feedback and hands-on recitation sessions.</p>
       </div>
       <div class="card">
-        <strong>Community Desk Assistant – Illinois Tech</strong> (2024–2025)
+        <strong>Community Desk Assistant – Illinois Tech</strong> (Feb2024 – May2025)
         <p>Delivered high-speed support and resolved 90% of student issues in under 5 minutes.</p>
       </div>
       <div class="card">
-        <strong>Data Analyst – Vishal Group, Pune</strong> (2021–2023)
+        <strong>Data Analyst – Vishal Group, Pune</strong> (Jun2021 – July2023)
         <p>Automated ETL pipelines, developed dashboards, and improved compliance tracking for the risk & audit teams.</p>
       </div>
     </section>
@@ -211,8 +108,19 @@
     <section id="education">
       <h2>Education</h2>
       <div class="card">
-        <strong>M.S. in IT & Management</strong> – Illinois Institute of Technology (2023–2025)<br>
-        <strong>B.Tech in Computer Engineering</strong> – PCCOE, Pune (2017–2021)
+        <strong>M.S. in IT & Management</strong> – Illinois Institute of Technology (Aug2023 – May2025)<br>
+        <strong>B.Tech in Computer Engineering</strong> – PCCOE, Pune (Jun2017 – May2021)
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="card">
+        <ul>
+          <li><a href="https://link.springer.com/chapter/10.1007/978-981-16-6369-7_60" target="_blank">📘 Springer: Fuzzy Logic in WSN</a></li>
+          <li><a href="https://www.irjet.net/archives/V8/i2/IRJET-V8I2302.pdf" target="_blank">📗 IRJET: Energy Efficient Clustering</a></li>
+          <li><a href="https://www.irjet.net/archives/V7/i6/IRJET-V7I6340.pdf" target="_blank">📙 IRJET: WSN Lifetime Optimization</a></li>
+        </ul>
       </div>
     </section>
   </div>
