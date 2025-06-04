@@ -3,15 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ganesh Dhore | Chicago | Data Specialist </title>
+  <title>Ganesh Dhore | Chicago | Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #e8f0ff, #fdfdfd);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #222;
       line-height: 1.6;
+    }
+    nav {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     .container {
       max-width: 1000px;
@@ -20,70 +49,116 @@
     }
     header {
       text-align: center;
-      padding-bottom: 30px;
+      padding-bottom: 40px;
     }
     h1 {
-      font-size: 2.8em;
-      color: #2c3e50;
-      margin-bottom: 10px;
+      font-size: 3em;
+      color: #1e3a8a;
+      margin-bottom: 5px;
     }
     h2 {
-      font-size: 1.8em;
-      color: #2c3e50;
-      border-bottom: 2px solid #ddd;
-      margin-top: 40px;
-      padding-bottom: 5px;
+      font-size: 2em;
+      color: #1e3a8a;
+      border-bottom: 2px solid #cbd5e0;
+      margin-top: 50px;
+      padding-bottom: 8px;
+    }
+    p, li {
+      font-size: 1.05em;
     }
     a {
       text-decoration: none;
     }
     .btn, .link-btn {
       display: inline-block;
-      margin-top: 10px;
-      margin-right: 10px;
+      margin: 8px 8px 0 0;
       padding: 10px 20px;
       color: #fff;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: 600;
     }
     .btn {
-      background-color: #2980b9;
+      background-color: #2563eb;
     }
     .btn:hover {
-      background-color: #1c5980;
+      background-color: #1d4ed8;
     }
     .link-btn {
-      background-color: #27ae60;
+      background-color: #059669;
     }
     .link-btn:hover {
-      background-color: #1e8449;
+      background-color: #047857;
     }
     .project-card {
       background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
+      padding: 18px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
     }
     ul {
       padding-left: 20px;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+      animation: fadeInUp 1s ease both;
     }
     .hero-image {
       width: 100%;
       max-height: 300px;
       object-fit: cover;
-      border-radius: 10px;
-      margin-top: 20px;
+      border-radius: 12px;
+      margin-top: 25px;
+    }
+    .scroll-top, .scroll-bottom {
+      position: fixed;
+      right: 20px;
+      font-size: 2rem;
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    .scroll-top {
+      bottom: 80px;
+    }
+    .scroll-bottom {
+      bottom: 20px;
+    }
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+
+  <div class="container" id="home">
     <header>
       <h1>Ganesh Dhore</h1>
-      <p><strong> Data Specialist | Based in Chicago, IL</strong></p>
+      <p><strong>Data & Cloud Specialist | Based in Chicago, IL</strong></p>
       <div>
         <a href="mailto:gdhore241299@gmail.com" class="btn">📧 Email Me</a>
         <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn" target="_blank">🔗 LinkedIn</a>
@@ -92,61 +167,55 @@
       <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80" alt="Work setup" class="hero-image">
     </header>
 
-    <section>
+    <section id="about">
       <h2>About Me</h2>
-      <p>Graduate student at Illinois Institute of Technology with a passion for data-driven problem solving, cloud systems, and full-stack development. Experienced in building scalable applications and actionable dashboards with modern tools and frameworks.</p>
+      <p>I'm a graduate student at Illinois Institute of Technology with hands-on experience in data analytics, cloud computing, and full-stack development. I specialize in transforming complex datasets into smart insights and designing solutions that improve business outcomes.</p>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <div class="project-card">
-        <p><strong>Flight Delay Prediction</strong>: Built a model using Python and Pandas to predict airline delays. Published results with data visualizations and performance metrics. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
+        <p><strong>Flight Delay Prediction</strong>: Built a predictive model using Python and Pandas to estimate flight delays. Included visualizations and metric evaluations. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
       </div>
       <div class="project-card">
-        <p><strong>Cloud Cost Optimization Dashboard</strong>: Created a Power BI dashboard to monitor and optimize AWS usage and costs using CUR data, S3, and SQL pipelines. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
+        <p><strong>Cloud Cost Optimization Dashboard</strong>: Designed a Power BI dashboard to analyze AWS CUR data for cost reduction. Integrated with S3 and SQL ETL processes. <a class="btn" href="#" target="_blank">View on GitHub</a></p>
       </div>
       <div class="project-card">
-        <p><strong>JPMorgan Virtual Experience</strong>: Spring Boot + Kafka integration simulating secure banking workflows. <a class="btn" href="https://github.com/GaneshDhore/midas" target="_blank">View on GitHub</a></p>
+        <p><strong>JPMorgan Virtual Experience</strong>: Developed secure transaction simulation with Spring Boot and Kafka. <a class="btn" href="https://github.com/GaneshDhore/midas" target="_blank">View on GitHub</a></p>
       </div>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
       <ul>
-        <li><strong>Languages:</strong> Python, R, SQL, Java, C++</li>
+        <li><strong>Languages:</strong> Python, SQL, R, Java, C++</li>
         <li><strong>Tools:</strong> Power BI, Tableau, Scikit-learn, Excel, Git</li>
         <li><strong>Cloud:</strong> AWS (S3, Lambda, CUR), Snowflake</li>
+        <li><strong>Frameworks:</strong> Spring Boot, Kafka</li>
         <li><strong>Databases:</strong> MySQL, Oracle</li>
-        <li><strong>ETL & Frameworks:</strong> Python Scripting, REST APIs, Spring Boot, Kafka</li>
       </ul>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
-      <p><strong>Data Analyst</strong> – Vishal Group, Pune, India (June 2021 – July 2023)<br>
-      Led data-driven reviews and automated ETL workflows to enhance risk reporting and decision-making. Built interactive dashboards and audit logs, and collaborated cross-functionally to improve inventory accuracy and compliance.</p>
+      <p><strong>Data Analyst</strong> – Vishal Group, Pune (Jun 2021 – Jul 2023)<br>
+      Automated ETL workflows, designed audit logs, and created Power BI/Tableau dashboards to streamline reporting and improve compliance—contributing to 10% revenue growth and 30% faster remediation.</p>
 
       <p><strong>Graduate Teaching Assistant</strong> – Illinois Institute of Technology (Jan 2025 – May 2025)<br>
-      Guided student understanding through recitations and feedback sessions while supporting grading and academic integrity.</p>
+      Led recitations, graded assignments, and helped students boost conceptual clarity by 30%.</p>
 
       <p><strong>Community Desk Assistant</strong> – Illinois Institute of Technology (Feb 2024 – May 2025)<br>
-      Delivered rapid, solution-focused support to students by resolving 90% of inquiries within five minutes.</p>
+      Resolved 90% of student concerns in under five minutes with empathy and efficiency.</p>
     </section>
 
-    <section>
-      <h2>Publications</h2>
-      <ul>
-        <li><a href="https://link.springer.com/chapter/10.1007/978-981-16-6369-7_60" class="link-btn" target="_blank">📘 Springer: Fuzzy Logic in WSN</a></li>
-        <li><a href="https://www.irjet.net/archives/V8/i2/IRJET-V8I2302.pdf" class="link-btn" target="_blank">📗 IRJET: Energy Efficient Clustering</a></li>
-        <li><a href="https://www.irjet.net/archives/V7/i6/IRJET-V7I6340.pdf" class="link-btn" target="_blank">📙 IRJET: WSN Lifetime Optimization</a></li>
-      </ul>
-    </section>
-
-    <section>
+    <section id="education">
       <h2>Education</h2>
       <p><strong>M.S. in Information Technology & Management</strong> – Illinois Institute of Technology (2023–2025)</p>
       <p><strong>B.Tech in Computer Engineering</strong> – PCCOE, Pune (2017–2021)</p>
     </section>
   </div>
+
+  <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆</button>
+  <button class="scroll-bottom" onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">⬇</button>
 </body>
 </html>
