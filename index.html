@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ganesh Dhore | Chicago | Data Analyst </title>
+  <title>Ganesh Dhore | Chicago | Data Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     html {
       scroll-behavior: smooth;
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #e8f0ff, #fdfdfd);
       margin: 0;
       padding: 0;
-      color: #222;
-      line-height: 1.6;
+      color: var(--text-color);
+      background: var(--bg-color);
+      transition: background 0.4s, color 0.4s;
+    }
+    :root {
+      --bg-color: #fdfdfd;
+      --text-color: #222;
+      --nav-bg: #1e3a8a;
+      --btn-bg: #2563eb;
+      --btn-hover: #1d4ed8;
+      --link-bg: #059669;
+      --link-hover: #047857;
+    }
+    [data-theme="dark"] {
+      --bg-color: #1a202c;
+      --text-color: #f7fafc;
+      --nav-bg: #2c5282;
+      --btn-bg: #3b82f6;
+      --btn-hover: #2563eb;
+      --link-bg: #10b981;
+      --link-hover: #059669;
     }
     nav {
-      background-color: #1e3a8a;
+      background-color: var(--nav-bg);
       color: white;
-      padding: 1rem 0;
+      padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    nav ul {
-      list-style: none;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 2rem;
-      padding: 0;
-      margin: 0;
     }
     nav a {
       color: white;
@@ -41,6 +55,13 @@
     }
     nav a:hover {
       text-decoration: underline;
+    }
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
     }
     .container {
       max-width: 1000px;
@@ -53,12 +74,12 @@
     }
     h1 {
       font-size: 3em;
-      color: #1e3a8a;
+      color: var(--nav-bg);
       margin-bottom: 5px;
     }
     h2 {
       font-size: 2em;
-      color: #1e3a8a;
+      color: var(--nav-bg);
       border-bottom: 2px solid #cbd5e0;
       margin-top: 50px;
       padding-bottom: 8px;
@@ -66,42 +87,39 @@
     p, li {
       font-size: 1.05em;
     }
-    a {
-      text-decoration: none;
-    }
     .btn, .link-btn {
       display: inline-block;
       margin: 8px 8px 0 0;
       padding: 10px 20px;
-      color: #fff;
+      color: white;
       border-radius: 8px;
       font-weight: 600;
     }
     .btn {
-      background-color: #2563eb;
+      background-color: var(--btn-bg);
     }
     .btn:hover {
-      background-color: #1d4ed8;
+      background-color: var(--btn-hover);
     }
     .link-btn {
-      background-color: #059669;
+      background-color: var(--link-bg);
     }
     .link-btn:hover {
-      background-color: #047857;
+      background-color: var(--link-hover);
     }
     .project-card {
-      background-color: #fff;
+      background-color: white;
       padding: 18px 20px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       margin-bottom: 20px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+    [data-theme="dark"] .project-card {
+      background-color: #2d3748;
     }
     .project-card:hover {
       transform: translateY(-6px);
-    }
-    ul {
-      padding-left: 20px;
     }
     section {
       margin-bottom: 60px;
@@ -117,8 +135,8 @@
     .scroll-top, .scroll-bottom {
       position: fixed;
       right: 20px;
-      font-size: 2rem;
-      background: #1e3a8a;
+      font-size: 1.5rem;
+      background: var(--nav-bg);
       color: white;
       border: none;
       padding: 10px;
@@ -146,13 +164,12 @@
 </head>
 <body>
   <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-    </ul>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
   </nav>
 
   <div class="container" id="home">
@@ -160,9 +177,9 @@
       <h1>Ganesh Dhore</h1>
       <p><strong>Data Analyst | Based in Chicago, IL</strong></p>
       <div>
-        <a href="mailto:gdhore241299@gmail.com" class="btn">📧 Email Me</a>
-        <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn" target="_blank">🔗 LinkedIn</a>
-        <a href="./Ganesh_Resume.pdf" class="btn" target="_blank">📄 Download Resume</a>
+        <a href="mailto:gdhore241299@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="./Ganesh_Resume.pdf" class="btn" target="_blank"><i class="fas fa-file-download"></i> Resume</a>
       </div>
       <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80" alt="Work setup" class="hero-image">
     </header>
@@ -217,5 +234,13 @@
 
   <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆</button>
   <button class="scroll-bottom" onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">⬇</button>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+  </script>
 </body>
 </html>
