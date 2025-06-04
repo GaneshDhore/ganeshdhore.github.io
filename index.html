@@ -144,7 +144,7 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#publications">Publications</a></li>
     </ul>
-    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme"><i class="fas fa-adjust"></i></button>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌓</button>
   </nav>
 
   <div class="container" id="home">
@@ -220,13 +220,16 @@
       <h2>Publications</h2>
       <div class="card">
         <ul>
-          <li><a href="https://link.springer.com/chapter/10.1007/978-981-16-6369-7_60" target="_blank">📘 Springer: Fuzzy Logic in WSN</a></li>
-          <li><a href="https://www.irjet.net/archives/V8/i2/IRJET-V8I2302.pdf" target="_blank">📗 IRJET: Energy Efficient Clustering</a></li>
-          <li><a href="https://www.irjet.net/archives/V7/i6/IRJET-V7I6340.pdf" target="_blank">📙 IRJET: WSN Lifetime Optimization</a></li>
+          <li><a href="https://link.springer.com/chapter/10.1007/978-981-16-6369-7_60" target="_blank">📘 Springer: Energy-Efficient Cluster Formation for Wireless Sensor Networks Using Fuzzy Logic</a></li>
+          <li><a href="https://www.irjet.net/archives/V8/i2/IRJET-V8I2302.pdf" target="_blank">📗 IRJET: Energy Efficient Clustering in Wireless Sensor Network</a></li>
+          <li><a href="https://www.irjet.net/archives/V7/i6/IRJET-V7I6340.pdf" target="_blank">📙 IRJET: Maximizing the life time of Wireless Sensor Network Using unequal fuzzy based clustering</a></li>
         </ul>
       </div>
     </section>
   </div>
+
+ 
+  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
   <script>
     function toggleTheme() {
@@ -234,6 +237,15 @@
       const current = html.getAttribute('data-theme');
       html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
     }
+
+    window.onscroll = function() {
+      const btn = document.getElementById('scrollTopBtn');
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    };
   </script>
 </body>
 </html>
