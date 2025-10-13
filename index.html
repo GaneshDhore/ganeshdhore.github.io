@@ -1,179 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ganesh Dhore | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesh Dhore | Data Analytics Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     :root {
+      --accent: #4f46e5;
       --bg-light: #f0f4f8;
       --text-light: #1a202c;
       --bg-dark: #1a202c;
       --text-dark: #f7fafc;
-      --accent: #4f46e5;
+      --gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
     }
-    html[data-theme="light"] {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-    html[data-theme="dark"] {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    nav {
-      background: var(--accent);
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li a {
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .theme-toggle {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    header {
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      color: var(--accent);
-    }
-    h2 {
-      font-size: 2rem;
-      margin-top: 3rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
-    .btn {
-      background: var(--accent);
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: 600;
-      margin: 0.5rem;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .btn:hover {
-      background: #6366f1;
-    }
-    .hero-image {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-top: 1rem;
-      border: 4px solid var(--accent);
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    .card {
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      margin-top: 1rem;
-      transition: transform 0.3s;
-    }
-    [data-theme="dark"] .card {
-      background: #2d3748;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-    .skill-box {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1rem;
-      font-weight: 600;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    }
-    [data-theme="dark"] .skill-box {
-      background: #2d3748;
-      color: white;
-    }
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 999;
-      font-size: 2rem;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 10px 15px;
-      cursor: pointer;
-      display: none;
-    }
-    form.contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 500px;
-      margin: 1rem auto;
-    }
-    form.contact-form input,
-    form.contact-form textarea {
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: 'Outfit', sans-serif;
-    }
-    form.contact-form button {
-      background: var(--accent);
-      color: white;
-      padding: 0.75rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    form.contact-form button:hover {
-      background: #6366f1;
-    }
+    html[data-theme="light"] { background: var(--bg-light); color: var(--text-light); }
+    html[data-theme="dark"] { background: var(--bg-dark); color: var(--text-dark); }
+    body { font-family:'Outfit',sans-serif; margin:0; transition:background .3s,color .3s; }
+
+    /* Navbar */
+    nav { background: var(--gradient); color:white; padding:1rem 2rem;
+      display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
+    nav ul { display:flex; gap:1.5rem; list-style:none; margin:0; padding:0; }
+    nav a { color:white; font-weight:600; text-decoration:none; }
+    .theme-toggle { background:none;border:none;color:white;font-size:1.4rem;cursor:pointer; }
+
+    /* Hero */
+    header { text-align:center; padding:3rem 1rem 2rem; }
+    .hero-image { width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid var(--accent); }
+    h1 { font-size:2.6rem;margin:.7rem 0;color:var(--accent); }
+    h2 { font-size:1.8rem;margin-top:3rem;border-bottom:2px solid #ccc;padding-bottom:.4rem; }
+    p.subtitle { font-size:1.1rem;opacity:.9;margin-top:.4rem; }
+
+    /* Buttons */
+    .btn { background:var(--accent);color:white;padding:10px 18px;border-radius:8px;
+      text-decoration:none;font-weight:600;margin:.5rem;display:inline-flex;align-items:center;gap:.5rem;transition:.3s; }
+    .btn:hover { transform:translateY(-2px);background:#6366f1; }
+
+    /* Containers */
+    .container { max-width:1000px;margin:0 auto;padding:2rem 1rem; }
+    section { margin-bottom:3rem; }
+
+    /* Cards */
+    .card { background:white;padding:1.3rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.05);
+      margin-top:1rem;transition:transform .3s; }
+    [data-theme="dark"] .card { background:#2d3748; }
+    .card:hover { transform:translateY(-5px); }
+
+    /* Skills Grid */
+    .skills-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem; }
+    .skill-box { background:white;padding:1rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.08);
+      font-weight:600; }
+    [data-theme="dark"] .skill-box { background:#2d3748;color:white; }
+
+    /* Scroll to top */
+    #scrollTopBtn { position:fixed;bottom:30px;right:30px;z-index:999;font-size:2rem;background:var(--accent);
+      color:white;border:none;border-radius:50%;padding:10px 15px;cursor:pointer;display:none; }
+
+    footer { text-align:center;padding:2rem 1rem;border-top:1px solid #ccc;opacity:.8; }
+
   </style>
 </head>
 <body>
@@ -192,112 +78,73 @@
 
   <div class="container" id="home">
     <header>
-      <img src="./ganesh-photo.jpg" alt="Ganesh Dhore Photo" class="hero-image">
+      <img src="./ganesh-photo.jpg" alt="Ganesh Dhore Photo" class="hero-image" />
       <h1>Ganesh Dhore</h1>
-      <p><strong>Data Analyst | Business Analyst | Based in Chicago</strong></p>
+      <p class="subtitle"><strong>Data Analyst • Analytics Engineer • Business Intelligence Developer</strong></p>
+      <p style="max-width:700px;margin:0 auto;opacity:.85;">
+        I turn raw data into business clarity. With a background in software development and analytics,
+        I build end-to-end data solutions that empower decision-makers to move faster, smarter, and confidently.
+      </p>
       <div>
         <a href="https://www.linkedin.com/in/ganeshdhore/" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="./GaneshDhore's_CV.pdf" class="btn" target="_blank"><i class="fas fa-file"></i> Resume</a>
+        <a href="https://github.com/GaneshDhore" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </header>
 
+    <!-- ABOUT -->
     <section id="about">
       <h2>About Me</h2>
-      <p>I’m a graduate student at Illinois Tech, passionate about turning complex data into clear stories. With a background in software development and experience in data analysis, I create efficient and impactful solutions that drive business outcomes.</p>
+      <p>
+        Graduate student at <strong>Illinois Institute of Technology, Chicago</strong> (MS in IT & Management).
+        I combine data engineering, analytics, and visualization to craft high-impact dashboards and insights.
+        I’m passionate about simplifying complexity, automating data flows, and driving results that matter.
+      </p>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Highlighted Projects</h2>
       <div class="card">
-        <strong>Flight Delay Prediction</strong>
-        <p>Developed a Python model using pandas and scikit-learn to predict airline delays, visualized with Matplotlib. <a href="https://github.com/GaneshDhore/flight-delay-prediction" target="_blank">View Project</a></p>
+        <strong>☁️ Cloud Cost Optimization Dashboard</strong>
+        <p>
+          Designed a scalable AWS → Python → Snowflake → Power BI pipeline that consolidated cloud billing data into
+          a single source of truth. Improved dashboard refresh time by 4× and identified 15-20% cost reduction opportunities.
+          <a href="https://github.com/GaneshDhore/Cloud-Cost-Optimization-Dashboard" target="_blank">View Project</a>
+        </p>
       </div>
       <div class="card">
-        <strong>Cloud Cost Optimization Dashboard</strong>
-        <p>Created Power BI dashboards and automated AWS CUR pipeline to track cloud expenses in real-time. <a href="https://github.com/GaneshDhore/cloud-cost-dashboard" target="_blank">View Project</a></p>
+        <strong>✈️ Flight Delay Prediction</strong>
+        <p>
+          Built an ML model using Python (pandas, scikit-learn) and SQL to predict flight delays with 85% accuracy.
+          Implemented feature engineering and model evaluation for trend analysis and data visualization.
+          <a href="https://github.com/GaneshDhore/Flight-Delay-Prediction" target="_blank">View Project</a>
+        </p>
       </div>
       <div class="card">
-        <strong>JPMorgan Virtual Experience</strong>
-        <p>Built Spring Boot services integrated with Kafka to simulate a secure banking system. <a href="https://github.com/GaneshDhore/midas" target="_blank">View Project</a></p>
+        <strong>🛒 E-commerce Sales Analysis</strong>
+        <p>
+          Developed a Power BI dashboard tracking revenue, profit, category performance, and customer trends.
+          Discovered seasonal profit patterns and identified Credit Card as the top payment mode (43% share).
+          <a href="https://github.com/GaneshDhore/Ecommerce-Sales-Analysis" target="_blank">View Project</a>
+        </p>
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-box"><strong>Programming Languages:</strong><br>Python, SQL, R, C++, Java</div>
-        <div class="skill-box"><strong>Visualization Tools:</strong><br>Power BI, Tableau, Excel</div>
-        <div class="skill-box"><strong>Cloud Platforms:</strong><br>AWS (S3, CUR, Lambda, EC2)</div>
-        <div class="skill-box"><strong>Databases:</strong><br>Snowflake, MySQL, Oracle</div>
-        <div class="skill-box"><strong>Frameworks & APIs:</strong><br>Spring Boot, Kafka, REST APIs</div>
-        <div class="skill-box"><strong>Tools & Version Control:</strong><br>Git, GitHub</div>
+        <div class="skill-box"><strong>Programming:</strong><br>Python, SQL, R, Java</div>
+        <div class="skill-box"><strong>Visualization:</strong><br>Power BI, Tableau, Excel</div>
+        <div class="skill-box"><strong>Cloud & Databases:</strong><br>AWS (S3, CUR), Snowflake, MySQL</div>
+        <div class="skill-box"><strong>Data Engineering Tools:</strong><br>dbt, Airflow, Pandas, NumPy</div>
+        <div class="skill-box"><strong>Frameworks:</strong><br>Spring Boot, Kafka, REST APIs</div>
+        <div class="skill-box"><strong>Version Control & Tools:</strong><br>Git, GitHub, VS Code</div>
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
       <h2>Experience</h2>
       <div class="card">
-        <strong>Graduate Teaching Assistant – Illinois Tech</strong> (Jan2025 - May2025)
-        <p>Helped students enhance conceptual understanding through detailed feedback and hands-on recitation sessions.</p>
-      </div>
-      <div class="card">
-        <strong>Community Desk Assistant – Illinois Tech</strong> (Feb2024 – May2025)
-        <p>Delivered high-speed support and resolved 90% of student issues in under 5 minutes.</p>
-      </div>
-      <div class="card">
-        <strong>Data Analyst – Vishal Group, Pune</strong> (Jun2021 – July2023)
-        <p>Automated ETL pipelines, developed dashboards, and improved compliance tracking for the risk & audit teams.</p>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card">
-        <strong>M.S. in IT & Management</strong> – Illinois Institute of Technology (Aug2023 – May2025)<br>
-        <strong>B.Tech in Computer Engineering</strong> – PCCOE, Pune (Jun2017 – May2021)
-      </div>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-      <div class="card">
-        <ul>
-          <li><a href="https://link.springer.com/chapter/10.1007/978-981-16-6369-7_60" target="_blank">📘 Springer: Energy-Efficient Cluster Formation for Wireless Sensor Networks Using Fuzzy Logic</a></li>
-          <li><a href="https://www.irjet.net/archives/V8/i2/IRJET-V8I2302.pdf" target="_blank">📗 IRJET: Energy Efficient Clustering in Wireless Sensor Network</a></li>
-          <li><a href="https://www.irjet.net/archives/V7/i6/IRJET-V7I6340.pdf" target="_blank">📙 IRJET: Maximizing the life time of Wireless Sensor Network Using unequal fuzzy based clustering</a></li>
-        </ul>
-      </div>
-    </section>
-  </div>
-
-    <section id="contact" class="container">
-    <h2>Contact Me</h2>
-    <p>If you'd like to collaborate or have any questions, feel free to send a message below!</p>
-    <form class="contact-form" action="https://formspree.io/f/xzbnzbln" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-  
-  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
-
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-    }
-
-    window.onscroll = function() {
-      const btn = document.getElementById('scrollTopBtn');
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        btn.style.display = 'block';
-      } else {
-        btn.style.display = 'none';
-      }
-    };
-  </script>
-</body>
-</html>
