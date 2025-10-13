@@ -139,12 +139,78 @@
         <div class="skill-box"><strong>Visualization:</strong><br>Power BI, Tableau, Excel</div>
         <div class="skill-box"><strong>Cloud & Databases:</strong><br>AWS (S3, CUR), Snowflake, MySQL</div>
         <div class="skill-box"><strong>Data Engineering Tools:</strong><br>dbt, Airflow, Pandas, NumPy</div>
-        <div class="skill-box"><strong>Frameworks:</strong><br>Spring Boot, Kafka, REST APIs</div>
         <div class="skill-box"><strong>Version Control & Tools:</strong><br>Git, GitHub, VS Code</div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+       <!-- EXPERIENCE -->
     <section id="experience">
       <h2>Experience</h2>
       <div class="card">
+        <strong>Graduate Teaching Assistant – Illinois Tech</strong> (Jan 2025 – May 2025)
+        <p>Supported 60+ students in IT process management; created tutorials and improved concept understanding by 30% through feedback sessions.</p>
+      </div>
+      <div class="card">
+        <strong>Community Desk Assistant – Illinois Tech</strong> (Feb 2024 – May 2025)
+        <p>Delivered front-line student support and resolved 90% of requests within 5 minutes while maintaining data logs for operational insights.</p>
+      </div>
+      <div class="card">
+        <strong>Data Analyst – Vishal Group, Pune</strong> (Jun 2021 – Jul 2023)
+        <p>Automated data pipelines and developed Power BI dashboards for risk & audit teams, reducing manual reporting time by 40%.</p>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+        <p><strong>M.S. in Information Technology & Management</strong> – Illinois Institute of Technology (Aug 2023 – May 2025)</p>
+        <p><strong>B.Tech in Computer Engineering</strong> – PCCOE, Pune (Jun 2017 – May 2021)</p>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="card">
+        <ul>
+          <li><a href="https://link.springer.com/chapter/10.1007/978-981-16-6369-7_60" target="_blank">📘 Springer – Energy-Efficient Cluster Formation for Wireless Sensor Networks Using Fuzzy Logic</a></li>
+          <li><a href="https://www.irjet.net/archives/V8/i2/IRJET-V8I2302.pdf" target="_blank">📗 IRJET – Energy-Efficient Clustering in Wireless Sensor Network</a></li>
+          <li><a href="https://www.irjet.net/archives/V7/i6/IRJET-V7I6340.pdf" target="_blank">📙 IRJET – Maximizing Lifetime of Wireless Sensor Networks Using Unequal Fuzzy-Based Clustering</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Let’s collaborate or discuss data projects — I’d love to hear from you.</p>
+      <form class="contact-form" action="https://formspree.io/f/xzbnzbln" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Ganesh Dhore · Built with ❤️ using HTML & CSS</p>
+  </footer>
+
+  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+  <script>
+    function toggleTheme(){
+      const html=document.documentElement;
+      const current=html.getAttribute('data-theme');
+      html.setAttribute('data-theme',current==='dark'?'light':'dark');
+    }
+    window.onscroll=function(){
+      const btn=document.getElementById('scrollTopBtn');
+      if(document.body.scrollTop>300||document.documentElement.scrollTop>300){btn.style.display='block';}
+      else{btn.style.display='none';}
+    };
+  </script>
+</body>
+</html>
